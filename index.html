@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niteesh P | Elite Data Scientist Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:#020617;
+      color:#e2e8f0;
+      line-height:1.6;
+    }
+
+    nav {
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(2,6,23,0.85);
+      backdrop-filter:blur(12px);
+      display:flex;
+      justify-content:space-between;
+      padding:12px 30px;
+      z-index:1000;
+      border-bottom:1px solid rgba(56,189,248,0.15);
+    }
+
+    nav a { color:#38bdf8; margin-left:15px; text-decoration:none; font-size:0.9rem; }
+    nav a:hover { color:white; }
+
+    header {
+      min-height:70vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 20px 20px;
+      background:radial-gradient(circle at top, #0ea5e9, #020617);
+      border-bottom:1px solid rgba(56,189,248,0.15);
+    }
+
+    .hero img {
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:50%;
+      margin-bottom:15px;
+      border:3px solid rgba(56,189,248,0.6);
+      box-shadow:0 0 25px rgba(56,189,248,0.6), 0 0 60px rgba(14,165,233,0.3);
+      transition:all 0.4s ease;
+      position:relative;
+    }
+
+    .hero img:hover {
+      transform:scale(1.08);
+      box-shadow:0 0 35px rgba(56,189,248,0.9), 0 0 80px rgba(14,165,233,0.5);
+    }
+
+    .hero h1 { font-size:2.8rem; }
+
+    .hero p {
+      max-width:750px;
+      margin:15px auto;
+      font-size:1.05rem;
+      color:#cbd5f5;
+    }
+
+    section {
+      padding:40px 20px;
+      max-width:1100px;
+      margin:auto;
+      border-bottom:1px solid rgba(56,189,248,0.08);
+    }
+
+    h2 {
+      font-size:1.8rem;
+      margin-bottom:15px;
+      color:#38bdf8;
+      position:relative;
+    }
+
+    h2::after {
+      content:"";
+      width:50px;
+      height:3px;
+      background:#38bdf8;
+      position:absolute;
+      left:0;
+      bottom:-5px;
+      border-radius:5px;
+    }
+
+    .card {
+      background:linear-gradient(145deg,#0f172a,#020617);
+      padding:18px;
+      border-radius:14px;
+      margin-top:12px;
+      border:1px solid rgba(56,189,248,0.1);
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      opacity:0;
+      transform:translateY(15px);
+      transition:0.3s ease;
+    }
+
+    .card.visible { opacity:1; transform:translateY(0); }
+
+    .card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 20px 40px rgba(56,189,248,0.15);
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+    }
+
+    .skill-card {
+      background:#020617;
+      padding:18px;
+      border-radius:10px;
+      border:1px solid rgba(56,189,248,0.1);
+    }
+
+    .badge {
+      display:inline-block;
+      background:rgba(56,189,248,0.15);
+      color:#38bdf8;
+      padding:5px 8px;
+      border-radius:6px;
+      margin:4px;
+      font-size:0.75rem;
+    }
+
+    .highlight { color:#38bdf8; font-weight:600; }
+
+    .project-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .project-card img {
+      width:100%;
+      border-radius:8px;
+      margin-bottom:10px;
+      transition:0.3s;
+    }
+
+    .project-card img:hover {
+      transform:scale(1.03);
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      font-size:0.85rem;
+      color:#94a3b8;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div><b>Niteesh</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <img src="Niteesh.jpg" alt="Niteesh Profile Photo" />
+    <h1>Niteesh P</h1>
+    <p>
+      Data Scientist with 5+ years of experience building scalable machine learning systems, big data pipelines, and AI-driven solutions.
+      <br><br>
+      Expertise in <span class="highlight">Python, Spark, AWS, NLP, Deep Learning, and MLOps</span> with a proven track record of delivering measurable business impact.
+    </p>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I specialize in building end-to-end machine learning solutions, from data ingestion and feature engineering to deploying scalable models in production.
+      <br><br>
+      My work spans predictive modeling, fraud detection, customer analytics, and large-scale data processing, impacting millions of users and driving data-informed decision-making.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="grid">
+
+    <div class="skill-card card">
+      <h3>Programming</h3>
+      <div class="badge">Python</div>
+      <div class="badge">SQL</div>
+      <div class="badge">R</div>
+      <div class="badge">Scala</div>
+    </div>
+
+    <div class="skill-card card">
+      <h3>Machine Learning</h3>
+      <div class="badge">XGBoost</div>
+      <div class="badge">Random Forest</div>
+      <div class="badge">LightGBM</div>
+      <div class="badge">Feature Engineering</div>
+    </div>
+
+    <div class="skill-card card">
+      <h3>Deep Learning & NLP</h3>
+      <div class="badge">TensorFlow</div>
+      <div class="badge">PyTorch</div>
+      <div class="badge">Text Classification</div>
+      <div class="badge">Recommendation Systems</div>
+    </div>
+
+    <div class="skill-card card">
+      <h3>Big Data & ETL</h3>
+      <div class="badge">Spark</div>
+      <div class="badge">Hadoop</div>
+      <div class="badge">Hive</div>
+      <div class="badge">ETL Pipelines</div>
+    </div>
+
+    <div class="skill-card card">
+      <h3>Cloud & MLOps</h3>
+      <div class="badge">AWS</div>
+      <div class="badge">SageMaker</div>
+      <div class="badge">Docker</div>
+      <div class="badge">Kubernetes</div>
+      <div class="badge">MLflow</div>
+    </div>
+
+    <div class="skill-card card">
+      <h3>Visualization</h3>
+      <div class="badge">Tableau</div>
+      <div class="badge">Power BI</div>
+      <div class="badge">Matplotlib</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Berkshire Hathaway (2024 - Present)</h3>
+    <ul>
+      <li>Led development of credit risk models (PD, LGD, EAD) using Python, PySpark, and XGBoost on 50M+ loan records, improving prediction accuracy by <span class="highlight">22%</span> and supporting regulatory compliance.</li>
+      <li>Designed distributed ML pipelines on AWS (S3, SageMaker, Redshift) processing <span class="highlight">2TB+ data daily</span>, reducing training time by 40%.</li>
+      <li>Built fraud detection models using deep learning and ensemble methods on 10M+ transactions, improving detection rate by <span class="highlight">35%</span> and reducing false positives by 18%.</li>
+      <li>Developed customer segmentation and CLV models across 5M+ users, increasing marketing ROI by <span class="highlight">27%</span>.</li>
+      <li>Implemented MLOps pipelines using Docker, Kubernetes, and CI/CD, reducing deployment time from 2 weeks to 2 days.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Informative Web Solutions (2020 - 2023)</h3>
+    <ul>
+      <li>Built machine learning models using Python and Scikit-learn on 3M+ records, improving forecasting accuracy by <span class="highlight">18%</span>.</li>
+      <li>Performed feature engineering and hyperparameter tuning, improving model AUC from 0.76 to <span class="highlight">0.89</span>.</li>
+      <li>Developed NLP pipelines analyzing 500K+ customer reviews, achieving <span class="highlight">92%</span> accuracy.</li>
+      <li>Designed ETL pipelines using Spark and SQL processing 500GB+ data, reducing processing time by 30%.</li>
+      <li>Conducted A/B testing impacting 200K+ users, increasing conversion rates by <span class="highlight">12%</span>.</li>
+      <li>Built time series forecasting models improving revenue prediction accuracy by 20%.</li>
+      <li>Created Tableau and Power BI dashboards tracking 15+ KPIs, reducing reporting time by 60%.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card card">
+      <img class="project-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" />
+      <h3>Fraud Detection System</h3>
+      <p><b>Problem:</b> Financial institutions face massive transaction volumes with hidden fraudulent patterns.</p>
+      <p><b>Solution:</b> Built an anomaly detection system using ensemble ML and deep learning models.</p>
+      <p><b>Tech Stack:</b> Python, TensorFlow, PyTorch, Spark, AWS</p>
+      <p><b>Impact:</b> Improved fraud detection rate by <span class="highlight">35%</span> and reduced false positives by 18%.</p>
+    </div>
+
+    <div class="project-card card">
+      <img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" />
+      <h3>Recommendation Engine</h3>
+      <p><b>Problem:</b> Low user engagement due to lack of personalization.</p>
+      <p><b>Solution:</b> Designed a collaborative filtering and content-based recommendation system.</p>
+      <p><b>Tech Stack:</b> Python, Scikit-learn, Spark, AWS</p>
+      <p><b>Impact:</b> Increased user engagement by <span class="highlight">25%+</span> and improved retention.</p>
+    </div>
+
+    <div class="project-card card">
+      <img class="project-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" />
+      <h3>Healthcare Analytics Platform</h3>
+      <p><b>Problem:</b> Healthcare data was siloed and difficult to analyze in real-time.</p>
+      <p><b>Solution:</b> Built scalable ELT pipelines and cloud-based data lake architecture.</p>
+      <p><b>Tech Stack:</b> Airflow, Spark, dbt, AWS S3, BigQuery</p>
+      <p><b>Impact:</b> Enabled real-time analytics and reduced data processing time by <span class="highlight">30%</span>.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p>Master’s in Computer Science – University of Central Missouri</p>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="card">
+    <p>AWS Certified Cloud Practitioner</p>
+    <p>Google Cloud Associate Cloud Engineer</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: niteeshp636@gmail.com</p>
+    <p>Phone: 469-628-9088</p>
+    <p>Location: Texas, USA</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Niteesh P</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+    });
+  });
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
